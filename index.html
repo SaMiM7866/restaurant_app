@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-black">
+    <div class="relative min-h-screen img">
+      <!-- Logo -->
+      <div
+        class=" absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+      >
+        <p class="glass text-6xl font-bold md:text-8xl">logo</p>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="absolute space-y-4 top-8 left-8">
+        <button
+          onclick="document.getElementById('menu').style.display='block'"
+          class="w-full px-6 py-2 text-xl text-white bg-black md:w-auto hover:bg-gray-800"
+        >
+          menu
+        </button>
+        <button
+          onclick="document.getElementById('contact').style.display='block'"
+          class="w-full px-6 py-2 text-xl text-white transition duration-300 bg-black md:w-auto hover:bg-gray-800"
+        >
+          contact
+        </button>
+      </div>
+
+      <!-- Footer Info -->
+      <div class="absolute bottom-8 left-8">
+        <p class="mb-2 text-xl md:text-2xl">
+          monday - friday 10-23 | saturday 14-02
+        </p>
+        <p class="mb-2 text-lg md:text-xl">42 village St, New York</p>
+        <p class="text-sm">
+          powered by
+          <a
+            href="#"
+            class="underline"
+            >Samim</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- Menu Modal -->
+    <div
+      id="menu"
+      class="fixed inset-0 hidden w-full h-full overflow-y-auto bg-black bg-opacity-50"
+    >
+      <div
+        class="relative w-11/12 p-5 mx-auto bg-white border rounded-md shadow-lg top-20 md:w-3/4 lg:w-1/2"
+      >
+        <div class="flex items-center justify-between p-4 text-white bg-black">
+          <h1 class="text-2xl font-bold">Starters</h1>
+          <span
+            onclick="document.getElementById('menu').style.display='none'"
+            class="text-2xl cursor-pointer"
+            >&times;</span
+          >
+        </div>
+
+        <!-- Menu Items -->
+        <div class="p-4 text-black">
+          <div class="space-y-4">
+            <h5 class="flex justify-between">
+              <span>Tomato Soup</span> <b>$2.50</b>
+            </h5>
+            <h5 class="flex justify-between">
+              <span>Chicken Salad</span> <b>$3.50</b>
+            </h5>
+            <h5 class="flex justify-between">
+              <span>Bread and Butter</span> <b>$1.00</b>
+            </h5>
+          </div>
+        </div>
+
+        <div class="p-4 text-white bg-black">
+          <h1 class="text-2xl font-bold">Main Courses</h1>
+        </div>
+        <div class="p-4 space-y-4 text-black">
+          <h5 class="flex justify-between">
+            <span>Grilled Fish and Potatoes</span> <b>$8.50</b>
+          </h5>
+          <h5 class="flex justify-between">
+            <span>Italian Pizza</span> <b>$5.50</b>
+          </h5>
+          <h5 class="flex justify-between">
+            <span>Veggie Pasta</span> <b>$4.00</b>
+          </h5>
+          <h5 class="flex justify-between">
+            <span>Chicken and Potatoes</span> <b>$6.50</b>
+          </h5>
+          <h5 class="flex justify-between">
+            <span>Deluxe Burger</span> <b>$5.00</b>
+          </h5>
+        </div>
+
+        <div class="p-4 text-white bg-black">
+          <h1 class="text-2xl font-bold">Desserts</h1>
+        </div>
+        <div class="p-4 space-y-4 text-black">
+          <h5 class="flex justify-between">
+            <span>Fruit Salad</span> <b>$2.50</b>
+          </h5>
+          <h5 class="flex justify-between">
+            <span>Ice cream</span> <b>$2.00</b>
+          </h5>
+          <h5 class="flex justify-between">
+            <span>Chocolate Cake</span> <b>$4.00</b>
+          </h5>
+          <h5 class="flex justify-between"><span>Cheese</span> <b>$5.50</b></h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div
+      id="contact"
+      class="fixed inset-0 hidden w-full h-full overflow-y-auto bg-black bg-opacity-50"
+    >
+      <div
+        class="relative w-11/12 p-5 mx-auto bg-white border rounded-md shadow-lg top-20 md:w-3/4 lg:w-1/2"
+      >
+        <div class="flex items-center justify-between p-4 text-white bg-black">
+          <h1 class="text-2xl font-bold">Contact</h1>
+          <span
+            onclick="document.getElementById('contact').style.display='none'"
+            class="text-2xl cursor-pointer"
+            >&times;</span
+          >
+        </div>
+
+        <div class="p-4 text-black">
+          <p class="mb-4">
+            Reserve a table, ask for today's special or just send us a message:
+          </p>
+          <form action="/action_page.php" target="_blank" class="space-y-4">
+            <input
+              class="w-full p-4 border rounded"
+              type="text"
+              placeholder="Name"
+              required
+              name="Name"
+            />
+            <input
+              class="w-full p-4 border rounded"
+              type="number"
+              placeholder="How many people"
+              required
+              name="People"
+            />
+            <input
+              class="w-full p-4 border rounded"
+              type="datetime-local"
+              required
+              name="date"
+              value="2020-11-16T20:00"
+            />
+            <input
+              class="w-full p-4 border rounded"
+              type="text"
+              placeholder="Message \ Special requirements"
+              required
+              name="Message"
+            />
+            <button
+              class="w-full px-6 py-2 text-white transition duration-300 bg-black md:w-auto hover:bg-gray-800"
+              type="submit"
+            >
+              SEND MESSAGE
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
